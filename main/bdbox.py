@@ -9,6 +9,8 @@ class BDBOX:
         self.h = h
 
 def split_img_bdboxs(img, bdboxs: list[BDBOX]) -> list[any]:
+# input: img: an image; bdboxs: a list of BDBOX
+# output: all the pixel positions in the format of (x,y) that are in the bdboxs.     
     pixels_pos = []
     img_h = img.shape[0]
     img_w = img.shape[1]
