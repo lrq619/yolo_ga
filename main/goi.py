@@ -2,6 +2,7 @@ from utils.chart import Chart
 from utils.tools import get_union_pixels
 from main.bdbox import BDBOX,split_img_bdboxs
 from main.motion_vector import MOTIONVECTOR
+from main.processed_box import ProcessedBox
 from sim.disp_imgs import disp_consecutive_imgs,highlight_img
 
 class GOI:
@@ -66,6 +67,14 @@ class GOI:
             self.chart[i] = r
         disp_consecutive_imgs(self.chart['splited_img'])
 
-            
         return
+
+    def process_pixels(self):
+        pixels = self.chart['splited_pixels']
+        bdboxs = self.chart['bdbox']
+        boxs = fun(pixels,bdboxs)
+        self.chart['processed_box'] = boxs
+
+    def srcnn_boxs(self):
+        boxs = self.chart['processed_box']
         
