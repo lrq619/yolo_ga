@@ -7,6 +7,8 @@ This is a self-defined data structure, it can be seen as a 2D chart like:
 |     Gender    | M     | F     | M   | F   | M   | F   |
 | Math_Grade    | 100   | 99    | 30  | 25  | 78  | 91  |
 | English_Grade | 101   | 32    | 57  | 11  | 28  | 99  |
+
+
 The `row_name` of `Chart` are strings, while the `index` are integers, user can access the `Chart` by either `row_name`, `index` and `row_name` with `index`.
 ## Initialize
 ```
